@@ -1,0 +1,87 @@
+div {
+
+  font-size: 2rem;
+}
+
+.card {
+
+  margin: 2rem 1rem;
+  background-color: white;
+  padding: 1rem 1rem 0rem;
+}
+
+.line {
+
+  height: 1px;
+  background-color: #636363;
+}
+
+.btns {
+
+  padding: 1rem 0;
+  display:flex;
+  justify-content: space-around;
+}
+
+.btn {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-icon {
+
+  margin-right: 1rem;
+}
+
+.btn-text {
+
+  font-size: 1.2rem;
+  color: #1b1c1c;
+}
+
+.verticalline {
+
+  height: 10px;
+  width: 1px;
+  background-color: #636363;
+  margin: auto 0;
+}
+
+.cellitem {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.5rem 0;
+}
+
+.cellitem:first-child {
+
+  margin: 0;
+}
+
+.parkingName {
+
+  font-size: 1.8rem;
+  color: #1B1C1C;
+}
+
+.valid {
+
+  font-size: 1.2rem;
+  color: #C8C8C8;
+}
+
+.numberPlate {
+
+  font-size: 1.4rem;
+  color: #1B1C1C;
+}
+
+.reserveTime {
+
+  font-size: 1.2rem;
+  color: #1B1C1C;
+}

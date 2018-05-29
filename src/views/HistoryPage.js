@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import './HistoryPage.css'
 import { HistoryList } from "./HistoryList";
+import { reserveHistory } from "../api/reserve";
 
-const headerbarstyle = {display:'flex', width:'100%', alignContent:'space-between', height:'4rem', lineHeight:'4rem', fontSize:'2rem'}
+const headerbarstyle = {backgroundColor:'white', display:'flex', width:'100%', alignContent:'space-between', height:'4rem', lineHeight:'4rem', fontSize:'2rem'}
 
 const headerbaritemstyle = {flex:1, textAlign:'center', margin:'0 1rem', boxSizing:'border-box'}
 
@@ -37,6 +38,21 @@ export class HistoryPage extends Component {
 		}
 		
 		this.doClickHeaderBar = this.doClickHeaderBar.bind(this)
+	}
+	
+	componentDidMount() {
+		
+		const data = {
+			pageIndex:1,
+			pageSize:20,
+		}
+		
+		reserveHistory(data).then(res => {
+		
+			this.setState({
+				dataList:res.data.reserveList
+			})
+		})
 	}
 	
 	doClickHeaderBar(value) {

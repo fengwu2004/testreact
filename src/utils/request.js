@@ -2,7 +2,7 @@ import axios from 'axios'
 
 // create an axios instance
 const service = axios.create({
-  baseURL: process.env.BASE_API, // api的base_url
+  baseURL: 'http://chongqinplaza/', // api的base_url
   timeout: 5000 // request timeout
 })
 
@@ -12,9 +12,7 @@ service.interceptors.request.use(config => {
   
 }, error => {
   
-  console.log(error)
-  
-  Promise.reject(error)
+  return Promise.reject(error)
 })
 
 // respone interceptor
