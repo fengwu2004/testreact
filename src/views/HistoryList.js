@@ -1,11 +1,7 @@
 import React, { Component } from 'react'
+import { HistoryCell } from "./HistoryCell";
 
 export class HistoryList extends Component {
-	
-	constructor(props) {
-		
-		super(props)
-	}
 	
 	render() {
 		
@@ -14,7 +10,7 @@ export class HistoryList extends Component {
 		return dataList.map((item, index) => {
 			return(
 				<div key={index}>
-					<div>{item.title}</div>
+					<HistoryCell reserveInfo={item}></HistoryCell>
 				</div>
 			)
 		})
