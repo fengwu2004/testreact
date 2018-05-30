@@ -5,9 +5,9 @@ import { reserveHistory } from "../api/reserve";
 
 const headerbarstyle = {backgroundColor:'white', display:'flex', width:'100%', alignContent:'space-between', height:'4rem', lineHeight:'4rem', fontSize:'2rem'}
 
-const headerbaritemstyle = {flex:1, textAlign:'center', margin:'0 1rem', boxSizing:'border-box'}
+const headerbaritemstyle = {flex:1, textAlign:'center', margin:'0 2rem', boxSizing:'border-box'}
 
-const activestyle = {borderBottom:'3px solid black'}
+const activestyle = {borderBottom:'2px solid black'}
 
 function baritemstyle(isActive) {
 	
@@ -65,7 +65,7 @@ export class HistoryPage extends Component {
 		const { showTotal, dataList } = this.state
 		
 		return (
-			<div className='main'>
+			<div styleName='main'>
 				<HeaderBar doClickItem={this.doClickHeaderBar} showTotal={showTotal}></HeaderBar>
 				<HistoryList dataList={dataList}></HistoryList>
 			</div>

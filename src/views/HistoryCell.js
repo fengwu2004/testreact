@@ -12,28 +12,29 @@ export class HistoryCell extends Component{
 		
 		return (
 			<div styleName='card'>
-				<div styleName='cellitem'>
-					<span styleName='parkingName'>{parkingName}</span><span>{money + '元'}</span>
+				<div styleName="content">
+					<div>
+						<span styleName='parkingName'>{parkingName}</span><span>{money + '元'}</span>
+					</div>
+					<div>
+						<span styleName='numberPlate'>{numberPlate}</span><span styleName='valid'>{valid?'未过期':'已过期'}</span>
+					</div>
+					<div>
+						<span styleName='reserveTime'>{'预定时间' + reserveTime}</span><span styleName='reserveTime'>{'预定车位:' + reserveCarport}</span>
+					</div>
+					<div>
+						<div styleName='reserveTime' style={{color: '#C8C8C8'}}>{'请在' + new Date(recommondTime).toLocaleDateString() + '前入场' }</div>
+					</div>
 				</div>
-				<div styleName='cellitem'>
-					<span styleName='numberPlate'>{numberPlate}</span><span styleName='valid'>{valid?'未过期':'已过期'}</span>
-				</div>
-				<div styleName='cellitem'>
-					<span styleName='reserveTime'>{'预定时间' + reserveTime}</span><span styleName='reserveTime'>{'预定车位:' + reserveCarport}</span>
-				</div>
-				<div styleName='cellitem'>
-					<div styleName='reserveTime' style={{color: '#C8C8C8'}}>{'请在' + new Date(recommondTime).toLocaleDateString() + '前入场' }</div>
-				</div>
-				<div styleName='line'></div>
 				<div styleName='btns'>
 					<div styleName='btn'>
-						<img styleName='btn_icon' src={reserve} width={15} alt='link'></img>
-						<span styleName='btn_text'>预定车位引导</span>
+						<img src={reserve} width={15} alt='link'></img>
+						<span>预定车位引导</span>
 					</div>
 					<div styleName='verticalline'></div>
 					<div styleName='btn'>
-						<img styleName='btn_icon' src={gotoparking} width={15} alt='link'></img>
-						<span styleName='btn_text'>前往停车场</span>
+						<img src={gotoparking} width={15} alt='link'></img>
+						<span>前往停车场</span>
 					</div>
 				</div>
 			</div>

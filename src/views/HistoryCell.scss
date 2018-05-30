@@ -1,65 +1,62 @@
-div {
-
-  font-size: 2rem;
-}
-
 .card {
 
   margin: 2rem 1rem;
   background-color: white;
-  padding: 1rem 1rem 0rem;
+  padding: 1rem 0rem 0rem;
 }
 
-.line {
+.content {
 
-  height: 1px;
-  background-color: #636363;
+  padding: 0 1rem;
+
+  div {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.5rem 0;
+  }
+
+  div:first-child {
+
+    margin: 0;
+  }
 }
 
 .btns {
 
-  padding: 1rem 0;
+  margin: 1rem 0;
   display:flex;
   justify-content: space-around;
-}
+  border-top: 1px solid #EEEEF2;
+  height: 4rem;
 
-.btn {
+  .verticalline {
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+    height: 3rem;
+    width: 1px;
+    background-color: #EEEEF2;
+    margin: auto 0;
+  }
 
-.btn_icon {
+  .btn {
 
-  margin-right: 1rem;
-}
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
 
-.btn_text {
+    img {
 
-  font-size: 1.2rem;
-  color: #1b1c1c;
-}
+      margin-right: 1rem;
+    }
 
-.verticalline {
+    span {
 
-  height: 10px;
-  width: 1px;
-  background-color: #636363;
-  margin: auto 0;
-}
-
-.cellitem {
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0.5rem 0;
-}
-
-.cellitem:first-child {
-
-  margin: 0;
+      font-size: 1.2rem;
+      color: #1b1c1c;
+    }
+  }
 }
 
 .parkingName {
