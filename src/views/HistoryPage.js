@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import './HistoryPage.css'
-import { HistoryList } from "./HistoryList";
 import { reserveHistory } from "../api/reserve";
+import { HistoryCell } from "./HistoryCell";
 
 const headerbarstyle = {backgroundColor:'white', display:'flex', width:'100%', alignContent:'space-between', height:'4rem', lineHeight:'4rem', fontSize:'2rem'}
 
@@ -38,6 +38,10 @@ export class HistoryPage extends Component {
 		}
 		
 		this.doClickHeaderBar = this.doClickHeaderBar.bind(this)
+		
+		this.doNaviToCarport = this.doNaviToCarport.bind(this)
+		
+		this.doNaviToParkingLot = this.doNaviToParkingLot.bind(this)
 	}
 	
 	componentDidMount() {
@@ -59,6 +63,16 @@ export class HistoryPage extends Component {
 		
 		this.setState({showTotal:value})
 	}
+	
+	doNaviToCarport(index) {
+	
+		alert(index)
+	}
+	
+	doNaviToParkingLot() {
+	
+	
+	}
 
 	render() {
 		
@@ -67,7 +81,9 @@ export class HistoryPage extends Component {
 		return (
 			<div styleName='main'>
 				<HeaderBar doClickItem={this.doClickHeaderBar} showTotal={showTotal}></HeaderBar>
-				<HistoryList dataList={dataList}></HistoryList>
+				{dataList.map((item, index) => {
+					return (<HistoryCell reserveInfo={item} key={index} doNaviToCarport={this.doNaviToCarport} doNaviToParkingLot={this.doNaviToParkingLot}></HistoryCell>)
+				})}
 			</div>
 		)
 	}
